@@ -41,6 +41,10 @@ the targeted process.
 
 Again, the dll must match the architecture.
 
+I often use those tools, in order to perform simple binary instrumentation. 
+Most of the time, I build a library performing the instrumentation using hooks 
+with the help of `hook`, then inject the library using manumap or dll_loader. 
+
 If you do not want to compile dll_loader and manumap yourself, you can find 
 the binaries by following these links
 
