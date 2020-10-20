@@ -8,7 +8,7 @@ Here's what the toolsuite contain:
 
 This is a really small codebase that helps me to make small patches to running
 binaries. The code is platform independant. The .hpp should be enough to 
-understand basic hooking. In case it's not, I've added a small windows example.
+understand basic hooking. In case it's not, I've added a small Windows example.
 
 - dll_loader
 
