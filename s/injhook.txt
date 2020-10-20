@@ -22,6 +22,12 @@ context is changed ( no other thread is created ), the dll is injected ( in a
 traditional manner ), the entry point is restored, then the execution is 
 resumed.  
 
+`./loader.exe <bin_to_run.exe> <ARGS...> <dll_to_inject.dll>` will launch
+bin_to_run.exe and inject dll_to_inject.dll
+
+Of course, the dll must match the architecture ( 32/64 bits ) of the targeted
+binary.
+
 - manumap
 
 This perform basically the same that does dll_loader, except that the injection
@@ -29,6 +35,17 @@ is made in a running process. The program performs thread hijacking and
 manually load the dll in memory. It's pretty basic at the moment, as the loader
 only perform relocations fixing, iat building and call TLS callbacks and 
 entry point.
+
+`./manumap.exe <PID> <dll_to_inject.dll>` will inject dll_to_inject.dll into
+the targeted process.
+
+Again, the dll must match the architecture.
+
+If you do not want to compile dll_loader and manumap yourself, you can find 
+the binaries by following these links
+
+https://s4r.cc/s/manumap.exe
+https://s4r.cc/s/dll_loader.exe
 
 Last thing, I wasn't even sure to release those tools, and don't want to 
 maintain it anymore. This is why I won't publish these on github too. Take it 
