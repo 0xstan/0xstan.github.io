@@ -1,12 +1,12 @@
 Two years ago I decided to explore brainfuck language and realised that I needed
 some tools to learn it properly. I started by implementing a compiler, which
-translate brainfuck code to linux executable, then a interpreter. I also build a
-small tool that allow a "conversion" from python3 code to brainfuck, and a 
+translate brainfuck code to linux executable, then a interpreter. I also built a
+small tool that allows a "conversion" from python3 code to brainfuck, and a 
 debugger.
-I do not use these tools anymore but I guess they can be useful.
+I do not use these tools anymore but I guess it can be useful.
 Python3, low quality code and bugs.
 
-Here they are:
+Here is it:
 
 H4sIALyJsl4AA+w9a3fbtpL9av4KxN57LFWPSHZe9XG0GzuyLL/jOOlNdX1cSqJsJhSpklRs757d
 374zA4AESVCi/IizZ8vT1hQwmBkMBvMAQLTvm7bbn15eWn59cvvLozwNeF6/fol/m69fNtS/8Kyt
