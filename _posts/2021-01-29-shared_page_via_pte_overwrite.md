@@ -211,11 +211,11 @@ deadbeef
 deadbeef
 deadbeef
 deadbeef
+cafebabe        <---- injector started 
 cafebabe
-cafebabe
+feedface        <---- "Enter" pressed
 feedface
-feedface
-deadbeef
+deadbeef        <---- "Enter" pressed
 deadbeef
 deadbeef
 deadbeef
