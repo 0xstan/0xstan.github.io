@@ -1,25 +1,23 @@
-hello, this is just a page to store random stuff.
-<br/>
-<br/>
+---
+layout: default
+---
 
-<a href="./s/injhook.txt">
-injection and hooking toolsuite
-</a>
+<div class="home">
 
-<br/>
+  <h1 class="page-heading">Posts</h1>
 
-<a href="./s/brainfuck_toolsuite.txt">
-a brainfuck toolsuite
-</a>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-<br/>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-<a href="./s/prisoners_dilemma.txt">
-a solution to my favourite crackme
-</a>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-<br/>
-
-<a href="./s/solution_sstic_2019.pdf">
-my solution to sstic's 2019 challenge
-</a>
+</div>
