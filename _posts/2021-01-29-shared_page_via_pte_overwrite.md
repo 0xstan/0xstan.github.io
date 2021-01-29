@@ -15,7 +15,7 @@ you're not familiar with this, I recommend you to read
 [this](https://www.triplefault.io/2017/07/introduction-to-ia-32e-hardware-paging.html) great article.
 
 To make it short and simple, each linux process have a page table located 
-somewhere in memory. This table make translation between process' virtual 
+somewhere in memory. This table makes translation between process' virtual 
 addresses and physical addresses possible.
 
 An interesting method to inject data into a running process is to modify its 
@@ -55,9 +55,9 @@ int main()
 }
 ```
 
-The program is simple, it allocates a page at address `0x666000`, then write 
+The program is simple, it allocates a page at address `0x666000`, then writes 
 the value `0xdeadbeef` into the very first 4 bytes of the new region. It then 
-read the value each second. Let's call this process our target process.
+reads the value each second. Let's call this process our target process.
 
 Let's create another process, running the following C code: 
 
@@ -86,14 +86,14 @@ int main()
 }
 ```
 
-This process (injector process) allocates a page at the same virtual address than our target
+This process (injector process) allocates a page at the same virtual address as our target
 process. If we manage to replace the page table entry of the target process
 with the page table entry of this process, then the target process will start
 printing `0xcafebabe` each second. Even better, we would have a shared page 
 between our two process that allow READ and WRITE access to the target from the injector.
 
 Obviously, manipulating page table entries can't be done from userland, so I 
-had to write a kernel module to achieve this. The kernel module expose 2 ioctls,
+had to write a kernel module to achieve this. The kernel module exposes 2 ioctls,
 the first one to perform the page table modification, and the second one to 
 restore the original entry. In order to make the injection possible, both 
 target and injector process must have the page to inject 
