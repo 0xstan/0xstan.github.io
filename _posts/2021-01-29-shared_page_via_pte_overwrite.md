@@ -124,10 +124,10 @@ struct ghost_map
  
 int* map()
 {
-    int* addr = (int*)mmap((void*)0x666000, 0x1000, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON, 0, 0);
-    printf("%p\n", addr);
-    *addr = 0xcafebabe;
-    return addr;
+    	int* addr = (int*)mmap((void*)0x666000, 0x1000, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON, 0, 0);
+    	printf("%p\n", addr);
+    	*addr = 0xcafebabe;
+    	return addr;
 }
  
 int main(int argc, char ** argv)
@@ -153,7 +153,7 @@ int main(int argc, char ** argv)
         fd = open("/dev/ghost_device", O_RDWR);
 
         if(fd < 0) {
-			printf("Cannot open device file...\n");
+	    printf("Cannot open device file...\n");
             return 0;
         }
  
@@ -172,10 +172,10 @@ int main(int argc, char ** argv)
 }
 ```
 
-The code has been a bit modified to take a pid as argv[1], and call our driver
+The code has been a bit modified to take a pid as `argv[1]`, and call our driver
 to perform the injection. After the page table modification, the process waits
-for an input, then change the value in the shared page. It waits for another 
-input, then restore the original entry in the target's page table.
+for an input, then changes the value in the shared page. It waits for another 
+input, then restores the original entry in the target's page table.
 
 Launching `./target` in a terminal, the process starts to write to stdout:
 
