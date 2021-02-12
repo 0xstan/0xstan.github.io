@@ -25,7 +25,7 @@ translate to a different physical address.
 
 Suppose we have a process, running the following C code:
 
-```C
+```c
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/mman.h>
@@ -61,7 +61,7 @@ reads the value each second. Let's call this process our target process.
 
 Let's create another process, running the following C code: 
 
-```C
+```c
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/mman.h>
@@ -101,7 +101,7 @@ allocated at the same address.
 
 Let's transform our injector code to this:
 
-```C
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
