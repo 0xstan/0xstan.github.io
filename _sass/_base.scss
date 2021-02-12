@@ -95,11 +95,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: $brand-color;
+        color: darken($brand-color, 15%);
     }
 
     &:hover {
-        color: $brand-color;
+        color: $text-color;
         text-decoration: underline;
     }
 }
@@ -132,7 +132,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #46676a;
+    background-color: #eef;
 }
 
 code {
