@@ -7,7 +7,7 @@ categories: analysis
 
 ## Introduction
 
-Recently I wanted to analyze some malware kernel code, so I downloaded an APT41
+Recently I wanted to analyse some malware kernel code, so I downloaded an APT41
 sample from [https://vx-underground.org/](vx-underground).
 
 Here are some basic infos about the sample: 
